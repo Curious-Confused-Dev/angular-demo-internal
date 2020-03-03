@@ -18,3 +18,26 @@
     </div>
   </div>
 </div>
+<hr>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li>New assignment</li>
+        <li>Create a button to display details</li>
+        <li>Show a paragraph with secret Password</li>
+        <li>Toggle the displaying of Password</li>
+        <li>Log all the button clicks in an array</li>
+        <li>Style the numbers with a background and text color.After 5 styling should be implemented.</li>
+        <button class="btn btn-primary" (click)="onToggleDetails()">Display details</button>
+        <p *ngIf="showSecretPassword">Secret Password = Tuna@123</p>
+        <div *ngFor="let log of logs; let i = index"
+        [ngStyle]="{ backgroundColor: i >=4 ?  'blue' : 'transparent'}"
+        [ngClass]="{'white-text' : i >= 4}">
+          {{ log }}
+        </div>
+      </ol>
+    </div>
+  </div>
+</div>
